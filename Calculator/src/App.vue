@@ -1,19 +1,22 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+/*import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'*/
+import Calculator from "@/components/icons/Calculator.vue";
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+
+<!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-    </div>
+    </div>-->
   </header>
 
   <main>
-    <TheWelcome />
+    <Calculator/>
+<!--    <TheWelcome />-->
   </main>
 </template>
 
