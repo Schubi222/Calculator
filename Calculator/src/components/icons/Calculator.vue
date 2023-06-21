@@ -45,6 +45,7 @@ import { ref} from "vue";
     first_number.value[0] === "-" ?  first_number.value=first_number.value.substring(1) : first_number.value="-"+first_number.value
   }
 
+  // This could result in some decimal point errors in calc.
   const decimal = () =>{
     let number_to_work_on = current_number()
     if (number_to_work_on.value === ""){number_to_work_on.value="0."}
@@ -75,10 +76,6 @@ import { ref} from "vue";
   display: grid;
 
   grid-template:repeat(4, 35px)/repeat(5, 35px);
-  grid-template-areas: ". . . . b"
-                       ". . . . b"
-                       ". . . . c"
-                       ". . . . c";
 }
 .Calculator_body_inputs{
   color: white;
@@ -97,10 +94,12 @@ import { ref} from "vue";
   padding: 50% 0
 }
 .b{
-  grid-area: b
+  grid-column: 5;
+  grid-row: 3/6;
 }
 .c{
-  grid-area: c;
+  grid-column: 5;
+  grid-row: 1/3;
 }
 #Calculator_display{
   background: aliceblue;
